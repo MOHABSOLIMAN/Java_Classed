@@ -10,8 +10,8 @@ public class main {
 
     public static void main(String[] args) throws NumberFormatException, IOException {
 
-        pyramidcsv pDAO = new pyramidcsv();
-        List<pyramid> pyramidd = pDAO.reader("D:\\Games Isos\\archive\\pyramids.csv");
+        pyramidcsv pc = new pyramidcsv();
+        List<pyramid> pyramidd = pc.reader("D:\\Games Isos\\archive\\pyramids.csv");
         pyramidd.sort(Comparator.comparingDouble(pyramid::getHeight));
         int i = 1;
         for (pyramid p : pyramidd) {
